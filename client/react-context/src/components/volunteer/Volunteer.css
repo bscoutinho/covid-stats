@@ -1,0 +1,33 @@
+.main-volunteer {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    min-height: 100vh;
+    color: #261D56
+}
+
+.add-volunteer {
+    margin: 0vw 2vw;
+}
+
+.volunteer-list {
+    margin: 5vw 2vw
+}
+
+.datatable {
+    background-color: white;
+}
+
+.panel-stats-volunteer {
+    border-radius: 30px;
+    background-color: white;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+
+.volunteer-field {
+    width: 80%;
+}

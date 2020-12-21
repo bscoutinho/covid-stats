@@ -1,0 +1,66 @@
+.main-stats {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    justify-content: space-around;
+}
+
+.year {
+    background-color: white;
+    width: 100px
+}
+
+.panel-stats {
+    border-radius: 30px;
+    background-color: white;
+    height: 35vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 2vw;
+}
+
+.select {
+    margin-bottom: 2vw;
+}
+
+.title-panel-stats {
+    color: #6B5FA1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.5vw;
+    text-align: center;
+}
+
+.row-stats {
+    margin: 0vw 2vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.row-stats .row-month {
+    color: #A19CBC;
+    font-size: 1.2rem;
+ 
+}
+.row-stats .row-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.row-amount {
+    color: #A19CBC;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.row-sign-up {
+    color: forestgreen;
+    font-size: 1rem;
+}
+
+.row-sign-down {
+    color: red;
+    font-size: 1rem;
+}
