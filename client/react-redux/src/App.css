@@ -1,0 +1,52 @@
+.menu {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vw;
+}
+
+.main-app {
+  background-color: #F7FAFE;
+  width: 100%;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.app {
+background-color: #5A33E4;
+min-height: 100vh;
+display: flex;
+font-size: calc(10px + 2vmin);
+}
+
+.link {
+margin-bottom: 6vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-decoration: none;
+}
+
+.icon {
+color: #CAC6E7;
+}
+
+.title-menu {
+color: #CAC6E7;
+font-size: 1rem;
+font-weight: bold;
+}
+
+.active {
+background-color: #F7FAFE;
+padding: 5px 10px;
+border-radius: 30px 0px 0px 30px;
+}
+
+a.active .icon {
+color: #261D56
+}
+
+a.active .title-menu {
+color: #261D56
+}
