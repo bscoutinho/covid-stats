@@ -1,0 +1,220 @@
+.main-overview {
+    display: grid;
+    grid-template-columns: 65% auto;
+    color: #261D56
+}
+
+.overview {
+    margin: 0vw 2vw;
+    display: grid;
+    grid-template-rows: 15% 15% 60%;
+}
+
+.stats {
+    background-color: #E7EDF6;
+}
+
+.country-textfield {
+    background-color: white;
+}
+
+.panel-overview {
+    border-radius: 30px;
+    background-color: white;
+}
+
+.paper-first {
+    margin: 5vw 2vw 0vw 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+.paper-second {
+    margin: 5vw 2vw 0vw 2vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-total {
+    width: 30%;
+    height: 8vw;
+    background-color: #FFF0F5;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid #FD79A8;
+    border-right: 5px solid #FD79A8;
+    border-top: 2px dotted #FD79A8;
+    border-bottom: 2px dotted #FD79A8;
+}
+
+.card-total .title {
+    color: #4B4279;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-total .value {
+    color: #DF0A56;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.total-new {
+    background-color: #DF0A56;
+    color: #FFF7F2;
+    width: 7vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.total-new .text-new {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-active {
+    width: 30%;
+    height: 8vw;
+    background-color: #FFF7F2;
+    border-radius: 0px 30px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid #E16A1A;
+
+}
+
+.card-active .title {
+    color: #4B4279;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-active .percent {
+    margin-left: 0.5vw;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #A19CBC;
+}
+
+.card-active .value {
+    color: #CF5300;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.active-new {
+    background-color: #CF5300;
+    color: #FFF7F2;
+    width: 7vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.active-new .text-new {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-recovered {
+    width: 30%;
+    height: 8vw;
+    background-color: #E6FFF8;
+    border-radius: 0px 30px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid #28D7A6;
+
+}
+
+.card-recovered .title {
+    color: #4B4279;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-recovered .percent {
+    margin-left: 0.5vw;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #A19CBC;
+}
+
+.card-recovered .value {
+    color: #26A26B;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.recovered-new {
+    background-color: #26A26B;
+    color: #FFF7F2;
+    width: 7vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.recovered-new .text-new {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.card-death {
+    width: 30%;
+    height: 8vw;
+    background-color: #EEECF9;
+    border-radius: 0px 30px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid #62559D;
+
+}
+
+.card-death .title {
+    color: #4B4279;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.card-death .percent {
+    margin-left: 0.5vw;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #A19CBC;
+}
+
+.card-death .value {
+    color: #554B86;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.death-new {
+    background-color: #554B86;
+    color: #FFF7F2;
+    width: 7vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.death-new .text-new {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.loading {
+    margin: auto;
+    width: 50%; 
+}
