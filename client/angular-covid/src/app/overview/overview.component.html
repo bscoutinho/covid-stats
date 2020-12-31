@@ -1,15 +1,24 @@
 <div class='main-overview'>
+
     <div class='overview'>
         <h4>Overview</h4>
-        <h3>Autocomplete aqui</h3>
-
+        <div class='col-md-6 input-group'>
+            <input id="typeahead-focus" type="text" class="form-control" [(ngModel)]="country"
+                [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)"
+                (click)="click$.next($any($event).target.value)" #instance="ngbTypeahead"
+                placeholder="Select a Country">
+            <div class="input-group-append">
+                <button class="form-control btn btn-outline-primary" type="button" id="button-addon2"
+                    (click)="fetchDataCountry()"><mat-icon aria-hidden="false" aria-label="Example search icon">search</mat-icon></button>
+            </div>
+        </div>
         <div class="panel-overview">
             <div class='paper-first'>
                 <div class='card-total'>
                     <span class='title'>Total Cases</span>
-                    <span class='value'>000</span>
+                    <span class='value'>{{totalConfirmed.toLocaleString('de-DE')}}</span>
                     <div class='total-new'>
-                        <span class='text-new'>+000</span>
+                        <span class='text-new'>+{{newConfirmed.toLocaleString('de-DE')}}</span>
                     </div>
                 </div>
             </div>
@@ -17,31 +26,31 @@
                 <div class='card-active'>
                     <div>
                         <span class='title'>Active</span>
-                        <span class='percent'>000%</span>
+                        <span class='percent'>{{percentActive | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>000</span>
+                    <span class='value'>{{totalActive.toLocaleString('de-DE')}}</span>
                     <div class='active-new'>
-                        <span class='text-new'>000</span>
+                       <span class='text-new' *ngIf="newActive > 0">+</span> <span class='text-new'>{{newActive.toLocaleString('de-DE')}}</span>
                     </div>
                 </div>
                 <div class='card-recovered'>
                     <div>
                         <span class='title'>Recovered</span>
-                        <span class='percent'>000%</span>
+                        <span class='percent'>{{percentRecovered | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>000</span>
+                    <span class='value'>{{totalRecovered.toLocaleString('de-DE')}}</span>
                     <div class='recovered-new'>
-                        <span class='text-new'>+000</span>
+                        <span class='text-new'>+{{newRecovered.toLocaleString('de-DE')}}</span>
                     </div>
                 </div>
                 <div class='card-death'>
                     <div>
                         <span class='title'>Death</span>
-                        <span class='percent'>000%</span>
+                        <span class='percent'>{{percentDeath | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>000</span>
+                    <span class='value'>{{totalDeath.toLocaleString('de-DE')}}</span>
                     <div class='death-new'>
-                        <span class='text-new'>+000</span>
+                        <span class='text-new'>+{{newDeath.toLocaleString('de-DE')}}</span>
                     </div>
                 </div>
             </div>
@@ -51,7 +60,6 @@
         <app-stats></app-stats>
     </div>
 
-    
+
 
 </div>
-
