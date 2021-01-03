@@ -1,15 +1,23 @@
 <div class='main-stats'>
     <div class='select'>
-      <h3>Select</h3>
+      <h3>select</h3>
+      <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="year">
+        <label ngbButtonLabel class="btn-primary">
+          <input ngbButton type="radio" [value]="2020" (click)="clickRadio('2020')">2020
+        </label>
+        <label ngbButtonLabel class="btn-primary">
+          <input ngbButton type="radio" [value]="2021" (click)="clickRadio('2021')">2021
+        </label>
+      </div>
     </div>
     
     <div class="panel-stats">
       <span class='title-panel-stats'>Cases/Deaths Montly</span>
       
-      <div class='row-stats' key={el.Month}>
-        <span class='row-month'>Jan</span>
-        <span class='row-value'>000</span>
-        <span class='row-amount'>000</span>
+      <div class='row-stats' *ngFor="let el of stats">
+        <span class='row-month'>{{el.Month}}</span>
+        <span class='row-value'>{{el.Confirmed | number:'1.0':'de' }}</span>
+        <span class='row-amount'>{{el.Deaths | number:'1.0':'de' }}</span>
       </div>
     </div>  
   </div>  

@@ -16,9 +16,9 @@
             <div class='paper-first'>
                 <div class='card-total'>
                     <span class='title'>Total Cases</span>
-                    <span class='value'>{{totalConfirmed.toLocaleString('de-DE')}}</span>
+                    <span class='value'>{{ totalConfirmed | number:'1.0':'de' }}</span>
                     <div class='total-new'>
-                        <span class='text-new'>+{{newConfirmed.toLocaleString('de-DE')}}</span>
+                        <span class='text-new'>+{{newConfirmed | number:'1.0':'de' }}</span>
                     </div>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                         <span class='title'>Active</span>
                         <span class='percent'>{{percentActive | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>{{totalActive.toLocaleString('de-DE')}}</span>
+                    <span class='value'>{{totalActive | number:'1.0':'de' }}</span>
                     <div class='active-new'>
-                       <span class='text-new' *ngIf="newActive > 0">+</span> <span class='text-new'>{{newActive.toLocaleString('de-DE')}}</span>
+                       <span class='text-new' *ngIf="newActive > 0">+</span> <span class='text-new'>{{newActive | number:'1.0':'de' }}</span>
                     </div>
                 </div>
                 <div class='card-recovered'>
@@ -38,9 +38,9 @@
                         <span class='title'>Recovered</span>
                         <span class='percent'>{{percentRecovered | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>{{totalRecovered.toLocaleString('de-DE')}}</span>
+                    <span class='value'>{{totalRecovered | number:'1.0':'de' }}</span>
                     <div class='recovered-new'>
-                        <span class='text-new'>+{{newRecovered.toLocaleString('de-DE')}}</span>
+                        <span class='text-new'>+{{newRecovered | number:'1.0':'de' }}</span>
                     </div>
                 </div>
                 <div class='card-death'>
@@ -48,16 +48,16 @@
                         <span class='title'>Death</span>
                         <span class='percent'>{{percentDeath | number : '1.2-2'}}%</span>
                     </div>
-                    <span class='value'>{{totalDeath.toLocaleString('de-DE')}}</span>
+                    <span class='value'>{{totalDeath | number:'1.0':'de' }}</span>
                     <div class='death-new'>
-                        <span class='text-new'>+{{newDeath.toLocaleString('de-DE')}}</span>
+                        <span class='text-new'>+{{newDeath | number:'1.0':'de' }}</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class='stats'>
-        <app-stats></app-stats>
+        <app-stats [country]="countryToStats" *ngIf="countryToStats"></app-stats>
     </div>
 
 

@@ -4,7 +4,6 @@ import { GlobalService } from '../global.service';
 import {NgbTypeahead} from '@ng-bootstrap/ng-bootstrap';
 import {Observable, Subject, merge} from 'rxjs';
 import {debounceTime, distinctUntilChanged, filter, map} from 'rxjs/operators';
-import { global } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-overview',
@@ -15,6 +14,7 @@ import { global } from '@angular/compiler/src/util';
 export class OverviewComponent implements OnInit {
 
   country: string
+  countryToStats: string
   countries: any
   isLoading: boolean = false
   totalConfirmed: number
@@ -29,7 +29,8 @@ export class OverviewComponent implements OnInit {
   newRecovered: number
   newActive: number
 
-  constructor(private globalService: GlobalService) { }
+  constructor(private globalService: GlobalService) { 
+  }
 
   ngOnInit(): void {
     this.fetchDataGlobal()
@@ -51,7 +52,6 @@ export class OverviewComponent implements OnInit {
   }
 
   fetchDataCountry() {
-    
     this.isLoading = true
     const globalData = this.globalService.getData()
     globalData.subscribe((res: any) => {
@@ -72,11 +72,11 @@ export class OverviewComponent implements OnInit {
         this.newDeath = obj.NewDeaths
         this.newRecovered = obj.NewRecovered
         this.newActive = obj.NewConfirmed - obj.NewDeaths - obj.NewRecovered
+
+        this.countryToStats = this.country
       }
     })
     this.isLoading = false
-
-
   }
 
   fetchDataGlobal() {

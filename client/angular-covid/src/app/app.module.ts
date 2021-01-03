@@ -1,3 +1,4 @@
+import { GlobalService } from './global.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -11,7 +12,14 @@ import { StatsComponent } from './overview/stats/stats.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
+import { registerLocaleData } from '@angular/common';
+
+import localeDe from '@angular/common/locales/de';
+
+registerLocaleData(localeDe, 'de');
 
 @NgModule({
   declarations: [
@@ -28,9 +36,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatSelectModule,
     NgbModule
   ],
-  providers: [],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

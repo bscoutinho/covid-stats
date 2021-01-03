@@ -1,1 +1,52 @@
-<p>volunteer works!</p>
+<div class='main-volunteer'>
+    <div class='add-volunteer'>
+        <h4>Volunteer</h4>
+        <div class="panel-stats-volunteer">
+            <span class='title-panel-stats'>Volunteer Form</span>
+                <input id="name-field" type="text" class='form-control' name="name" [(ngModel)]="name" placeholder="Name" required>
+                <input id="email-field" type="text" class='form-control' name="email" [(ngModel)]="email" placeholder="Email" required>
+                <input id="phone-field" type="text" class='form-control' name="phone" [(ngModel)]="phone" placeholder="Phone" required>
+                <button class="form-control btn btn-outline-primary" type="submit" id="button-addon2" (click)="saveVolunteer()">
+                    <mat-icon aria-hidden="false" aria-label="Example search icon" >save</mat-icon>
+                </button>
+        </div>
+    </div>
+
+    <div class='volunteer-list'>
+        <span class='title-panel-stats'>Volunteer List</span>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col" colspan="2">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let volunteer of volunteers">
+              <th scope="row" hidden>{{ volunteer.id }}</th>
+              <td>
+                {{ volunteer.name }}
+              </td>
+              <td>
+                {{ volunteer.email }}
+              </td>
+              <td>
+                {{ volunteer.phone }}
+              </td>
+              <td>
+                <button class="form-control btn btn-sm btn-outline-primary" type="button" id="button-addon2" (click)="onEdit(volunteer.id, volunteer.name, volunteer.email, volunteer.phone)"
+                    ><mat-icon aria-hidden="false" aria-label="Example search icon">edit</mat-icon></button>
+              </td>
+              <td>
+                <button class="form-control btn btn-sm btn-outline-primary" type="button" id="button-addon2" (click)="onDelete(volunteer.id)"
+                    ><mat-icon aria-hidden="false" aria-label="Example search icon">delete</mat-icon></button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          
+    </div>
+</div>
