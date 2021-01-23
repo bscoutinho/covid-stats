@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import 'jasmine';
 import { VolunteerComponent } from './volunteer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('VolunteerComponent', () => {
   let component: VolunteerComponent;
@@ -8,7 +9,8 @@ describe('VolunteerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VolunteerComponent ]
+      declarations: [ VolunteerComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));

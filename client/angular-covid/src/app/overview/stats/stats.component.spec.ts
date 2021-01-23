@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import 'jasmine';
 import { StatsComponent } from './stats.component';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('StatsComponent', () => {
   let component: StatsComponent;
@@ -8,7 +9,8 @@ describe('StatsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StatsComponent ]
+      declarations: [ StatsComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));
